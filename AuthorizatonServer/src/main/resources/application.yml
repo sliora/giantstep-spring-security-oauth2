@@ -1,0 +1,26 @@
+server:
+  port: 9000
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        #        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        default_batch_fetch_size: 1000
+    open-in-view: false
+
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://portal.giantstepcorp.com:5432/do?charSet=utf-8&prepareThreshold=1
+#    username: giantstep_admin
+#    password: 1qaz2wsx#
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_oauth2?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 1234

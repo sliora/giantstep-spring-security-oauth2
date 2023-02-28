@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <style>
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    center,
+    dl,
+    dt,
+    dd,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    input,
+    video {
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      box-sizing: border-box;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+
+    .login-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-family: "Arial Black", "Arial Normal", "Arial", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .form-box {
+      width: 606px;
+      height: 315px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+      border-radius: 6px;
+      margin: 90px 0 14px 0;
+      padding: 52px 0 70px 0;
+    }
+
+    .input {
+      width: 322px;
+      height: 40px;
+      font-family: "맑은 고딕", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+      letter-spacing: normal;
+      text-align: left;
+      text-transform: none;
+      padding: 10px;
+      border: 1px solid #333333;
+      border-radius: 4px;
+    }
+
+    .submit-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 322px;
+      height: 43px;
+      box-shadow: none;
+      background-color: #3c44bc;
+      border-style: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .text {
+      font-family: "맑은 고딕", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 14px;
+    }
+
+    .dark-gray {
+      color: #333333;
+    }
+
+    .white {
+      color: #ffffff;
+    }
+
+    .footer {
+      font-size: 12px;
+      text-align: center;
+      font-family: "Arial Normal", "Arial", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+    }
+  </style>
+</head>
+<body>
+<div class="login-page">
+  <h1>GIANTSTEP</h1>
+  <div class="form-box">
+    <form id="login-form" method="post" th:action="@{/login}">
+      <div>
+        <input
+                class="input"
+                type="text"
+                id="username"
+                name="username"
+                placeholder="아이디"
+                style="margin-bottom: 25px"
+        />
+      </div>
+      <div>
+        <input
+                class="input"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="비밀번호"
+                style="margin-bottom: 20px"
+        />
+      </div>
+      <div style="display: flex; gap: 2px; margin-bottom: 14px">
+        <input type="checkbox" />
+        <p class="text dark-gray">아이디 저장</p>
+      </div>
+      <div>
+        <button class="submit-button" type="submit">
+          <p class="text white">로그인</p>
+        </button>
+      </div>
+    </form>
+  </div>
+  <p class="footer dark-gray">
+    COPYRIGHT ⓒ GIANTSTEP. ALL RIGHTS RESERVED.<br />
+    2F, 8, HAKDONG-RO 37-GIL, GANGNAM-GU, SEOUL 06053, REP. OF KOREA
+  </p>
+</div>
+</body>
+<!--<script>-->
+<!--  const form = document.getElementById("login-form");-->
+<!--  const username = document.getElementById("username");-->
+<!--  const password = document.getElementById("password");-->
+
+<!--  form.addEventListener("submit", async (e) => {-->
+<!--    e.preventDefault();-->
+
+<!--    const usernameValue = username.value;-->
+<!--    const passwordValue = password.value;-->
+
+<!--    const result = await fetch("insert url", {-->
+<!--      method: "POST", // *GET, POST, PUT, DELETE, etc.-->
+<!--      body: {-->
+<!--        username: usernameValue,-->
+<!--        password: passwordValue,-->
+<!--      },-->
+<!--    });-->
+
+<!--    console.log("result", result);-->
+<!--  });-->
+<!--</script>-->
+</html>
